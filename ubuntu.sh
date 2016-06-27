@@ -27,6 +27,10 @@ exec_cmd() {
 #########################################################
 
 exec_cmd 'apt-get update -qq'
+
+exec_cmd 'apt-get build-dep -y --force-yes linux'
+exec_cmd 'apt-get build-dep -y --force-yes gcc'
+
 exec_cmd 'apt-get -y --force-yes install subversion'
 exec_cmd 'apt-get -y --force-yes install asciidoc'
 exec_cmd 'apt-get -y --force-yes install bash'
@@ -73,6 +77,3 @@ exec_cmd 'apt-get -y --force-yes install libz-dev'
 exec_cmd 'apt-get -y --force-yes install opam'
 exec_cmd 'apt-get -y --force-yes install sphinxsearch'
 exec_cmd 'apt-get -y --force-yes install sphinx-common'
-
-exec_cmd 'apt-get build-dep -y --force-yes linux'
-exec_cmd 'apt-get build-dep -y --force-yes gcc'
